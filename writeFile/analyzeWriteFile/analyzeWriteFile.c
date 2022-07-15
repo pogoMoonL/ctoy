@@ -12,7 +12,7 @@ int main () {
       fprintf(stderr, "\nError to open the file\n");
       exit (1);
    }
-   struct Student inp1 = {1, "Ram"};
+   struct Student inp1 = { .roll_no = 1, .name = "Ram"};
    struct Student inp2 = {2, "Shyam"};
    fwrite (&inp1, sizeof(struct Student), 1, of);
    fwrite (&inp2, sizeof(struct Student), 1, of);
