@@ -3,3 +3,4 @@ all:
 
 analyzeTxtFile:
 	hexdump -C  c1.txt
+#	xxd -b 

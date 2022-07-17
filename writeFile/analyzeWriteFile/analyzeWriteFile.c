@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <inttypes.h>
+
 struct Student {
-   int roll_no;
+   uint16_t roll_no : 3;
    char name[20];
 };
 int main () {
@@ -12,7 +14,7 @@ int main () {
       fprintf(stderr, "\nError to open the file\n");
       exit (1);
    }
-   struct Student inp1 = { .roll_no = 1, .name = "Ram"};
+   struct Student inp1 = { .roll_no = 7, .name = "Ram"};
    struct Student inp2 = {2, "Shyam"};
    fwrite (&inp1, sizeof(struct Student), 1, of);
    fwrite (&inp2, sizeof(struct Student), 1, of);
